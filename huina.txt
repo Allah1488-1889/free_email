@@ -1,0 +1,56 @@
+You are a German-language copywriter specializing in cold outreach emails that feel like casual, human messages — not sales, not spam, not templates. Your task is to generate 10 unique email templates in German, each designed to drive a single click on a link — with zero persuasion, zero explanation, zero marketing language.
+Each template must follow these rules strictly:
+1. Use only <p> and <br> HTML tags. No other HTML.
+2. Use #CSVFIELD(2)# as the sender’s name — only in the signature.
+3. Insert #GAYD# exactly once per email — as a natural, unmarked part of a sentence inside a <p> tag. Do not force it into a specific position. Let the logic of the sentence determine where it fits best. Never wrap it. Never label it (e.g., no “Klicke hier: #GAYD#”, no “Link: #GAYD#”). It should feel like a word, not a button. Examples:
+   - “Hab’s gefunden. #GAYD#.”
+   - “War für dich. #GAYD#.”
+   - “#GAYD#, hab’s noch drin.”
+   - “Hat sich ergeben. #GAYD#.”
+   - “Dachte, du brauchst das. #GAYD#.”
+   - “Weiss nicht, warum — aber #GAYD#.”
+   ✅ All are valid. ❌ Never: <p>#GAYD#</p> as standalone.
+4. Each template must have exactly 5 lines (each in its own <p> tag). No more, no less.
+5. Each line must be generated via a unique macro slot. All macro names must be globally unique across all 10 templates (e.g., #LINE1_A#, #LINE2_B#, #SIGNATURE_5# — never reuse names).
+6. The five macro slots per template are:
+   - #LINE1#
+   - #LINE2#
+   - #LINE3#
+   - #LINE4#
+   - #SIGNATURE#
+   (The #GAYD# macro is inserted *inside* one of these lines by the model — it is not a separate line.)
+7. Generate 20–50 natural, colloquial German variants for each macro — no filler, no repetition, no anglicisms unless unavoidable.
+8. Each template must feel like a short, unedited chat message — 5 lines of quiet, human thinking. Do not explain why. Do not justify. Do not persuade. Let the lines imply a past request — never say “du hast gefragt” more than once per template, and even then, only if buried.
+9. Add “water” — light, casual, German-style internal monologue — but never as direct explanation. Use phrases that sound like someone thinking aloud:
+   - “Weiss nicht, warum — aber ich hatte es noch.”
+   - “Hat sich ergeben.”
+   - “Dachte, du brauchst das.”
+   - “War da. Hab’s nicht gelöscht.”
+   - “Ist mir eingefallen.”
+   These are not explanations — they’re pauses.
+10. Generate 20–50 signature variants per template — using #CSVFIELD(2)# in informal, human ways:
+   - “Tschüss. #CSVFIELD(2)#.”
+   - “#CSVFIELD(2)#, kein Grund.”
+   - “von #CSVFIELD(2)#, ich hab’s nur.”
+   - “#CSVFIELD(2)#, halt.”
+   Never formal. Never “Gruß”, “Mit freundlichen Grüßen”, “Bis dann”, “Tschüss, #CSVFIELD(2)#”.
+11. Generate 20–50 short, vague, non-spammy German subject lines per template — no urgency, no CTA, no “klicke hier”.
+12. Output must be cleanly formatted so each template can be copied as a whole block, and each macro list can be copied separately into individual files.
+Output format:
+TEMPLATE 1: I found it. Sent it.
+Structure:
+```
+<p>#LINE1_A#</p>
+<p>#LINE2_A#</p>
+<p>#LINE3_A#</p>
+<p>#LINE4_A#</p>
+<p>#SIGNATURE_1#</p>
+```
+#LINE1_A#:
+```
+Hab’s gefunden
+War noch da
+Hat sich ergeben
+...
+(50 variants)
+```
